@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutri Farm Eggs | Organic, Farm-Fresh Eggs</title>
+<meta name="description" content="Nutri Farm Eggs sells organically grown, healthy, farm-fresh eggs. Order by call or WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fff8e7; --cream2:#fdf0cf; --green:#2f6b3a; --green-d:#1f4a28;
+  --yolk:#f5b324; --yolk-d:#d9960b; --brown:#8a5a2b; --ink:#2b2a26; --muted:#6b675c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.2}
+section{padding:72px 0}
+.eyebrow{color:var(--green);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);color:var(--green-d);margin:6px 0 12px}
+.lead{color:var(--muted);max-width:620px}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(255,248,231,.95);backdrop-filter:blur(6px);border-bottom:1px solid #eadfba}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:1.25rem;color:var(--green-d)}
+.logo svg{width:30px;height:36px}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--green)}
+@media(max-width:640px){nav ul{gap:14px;font-size:.85rem}.logo span{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-family:"Poppins",sans-serif;font-weight:600;letter-spacing:.02em;border:2px solid transparent;cursor:pointer;font-size:.98rem;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:#25d366;color:#073b1b}
+.btn-wa:hover{background:#1fbd5a}
+.btn-call{background:var(--yolk);color:#3a2800}
+.btn-call:hover{background:var(--yolk-d)}
+.btn-ghost{border-color:var(--green);color:var(--green)}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--cream) 0%,var(--cream2) 100%);padding:64px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);color:var(--green-d)}
+.hero h1 em{font-style:normal;color:var(--yolk-d)}
+.hero p{margin:18px 0 28px;color:var(--muted);font-size:1.1rem;max-width:480px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{display:flex;justify-content:center}
+.hero-art svg{width:min(100%,380px);height:auto;filter:drop-shadow(0 18px 24px rgba(138,90,43,.25))}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.cta{justify-content:center}.hero-art{order:-1}.hero-art svg{width:240px}}
+
+/* products */
+.grid{display:grid;gap:22px;margin-top:36px}
+.products{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:#fff;border-radius:20px;padding:28px;border:1px solid #eadfba;box-shadow:0 6px 18px rgba(138,90,43,.08)}
+.card .egg{width:84px;height:100px;margin-bottom:14px;filter:drop-shadow(0 8px 6px rgba(90,58,24,.3))}
+.card h3{font-size:1.4rem;color:var(--green-d)}
+.card p{color:var(--muted);margin:8px 0 16px}
+.packs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pack{background:var(--cream2);border-radius:999px;padding:5px 14px;font-size:.85rem;font-weight:600;color:var(--brown)}
+.price{font-size:.9rem;color:var(--muted);margin-bottom:16px}
+.card .btn{padding:10px 20px;font-size:.95rem}
+
+/* why */
+.why{background:var(--green-d);color:#f6f1dc}
+.why h2{color:#fff}.why .eyebrow{color:var(--yolk)}.why .lead{color:#cfe0cf}
+.features{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.feat{background:rgba(255,255,255,.07);border-radius:18px;padding:24px}
+.feat .ic{font-size:2rem;margin-bottom:8px}
+.feat h3{font-size:1.15rem;color:var(--yolk);margin-bottom:6px}
+.feat p{color:#d8e6d8;font-size:.95rem}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about ul{list-style:none;margin-top:16px}
+.about li{padding:6px 0 6px 30px;position:relative}
+.about li::before{content:"✓";position:absolute;left:0;color:#fff;background:var(--green);width:20px;height:20px;border-radius:50%;font-size:.75rem;display:grid;place-items:center;top:10px}
+.stat-box{background:var(--yolk);border-radius:24px;padding:36px;text-align:center;color:#3a2800}
+.stat-box strong{display:block;font-family:"Playfair Display",Georgia,serif;font-size:2.6rem}
+@media(max-width:800px){.about .wrap{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--cream2)}
+.contacts{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.ccard{background:#fff;border-radius:18px;padding:24px;border:1px solid #eadfba}
+.ccard .ic{font-size:1.6rem}
+.ccard h3{font-size:1.05rem;margin:6px 0 4px;color:var(--green-d)}
+.ccard a{color:var(--green);font-weight:700;display:block;word-break:break-all}
+.ccard a:hover{text-decoration:underline}
+
+footer{background:var(--ink);color:#c9c4b3;text-align:center;padding:26px 20px;font-size:.9rem}
+
+/* floating whatsapp */
+.fab{position:fixed;right:18px;bottom:18px;z-index:20;background:#25d366;color:#073b1b;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:1.8rem;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+
+<!-- reusable egg shape -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="egg" viewBox="0 0 100 120">
+      <path d="M50 4C26 4 6 52 6 78c0 24 20 38 44 38s44-14 44-38C94 52 74 4 50 4z"/>
+    </symbol>
+    <radialGradient id="gWhite" cx="36%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#f8efdc"/>
+      <stop offset=".8" stop-color="#e3d2ae"/><stop offset="1" stop-color="#c9b389"/>
+    </radialGradient>
+    <radialGradient id="gBrown" cx="36%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#eec59a"/><stop offset=".4" stop-color="#d49a5e"/>
+      <stop offset=".8" stop-color="#a86a33"/><stop offset="1" stop-color="#7a4620"/>
+    </radialGradient>
+    <radialGradient id="gHi" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <symbol id="egg-white" viewBox="0 0 100 120">
+      <path d="M50 4C26 4 6 52 6 78c0 24 20 38 44 38s44-14 44-38C94 52 74 4 50 4z" fill="url(#gWhite)"/>
+      <ellipse cx="36" cy="40" rx="11" ry="20" transform="rotate(18 36 40)" fill="url(#gHi)"/>
+      <circle cx="62" cy="86" r=".9" fill="#b9a27a" opacity=".5"/><circle cx="44" cy="96" r=".8" fill="#b9a27a" opacity=".45"/><circle cx="68" cy="68" r=".7" fill="#b9a27a" opacity=".4"/>
+    </symbol>
+    <symbol id="egg-brown" viewBox="0 0 100 120">
+      <path d="M50 4C26 4 6 52 6 78c0 24 20 38 44 38s44-14 44-38C94 52 74 4 50 4z" fill="url(#gBrown)"/>
+      <ellipse cx="36" cy="40" rx="10" ry="19" transform="rotate(18 36 40)" fill="url(#gHi)" opacity=".75"/>
+      <circle cx="60" cy="84" r="1" fill="#6b3d1a" opacity=".35"/><circle cx="45" cy="97" r=".9" fill="#6b3d1a" opacity=".3"/><circle cx="68" cy="66" r=".8" fill="#6b3d1a" opacity=".3"/><circle cx="30" cy="80" r=".8" fill="#f2d3a8" opacity=".4"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo">
+      <svg viewBox="0 0 100 120" aria-hidden="true"><use href="#egg" fill="#f5b324"/></svg>
+      <span>Nutri Farm Eggs</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#products">Eggs</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Organically grown · Farm fresh</p>
+      <h1>Wholesome eggs, <em>naturally</em> better.</h1>
+      <p>Nutri Farm Eggs brings you healthy, organically raised eggs, from our farm to your kitchen. Taste the freshness in every yolk.</p>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/918310901383?text=Hi%20Nutri%20Farm%20Eggs%2C%20I%20would%20like%20to%20order%20eggs." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+        <a class="btn btn-call" href="tel:+918310901383">📞 Call Now</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 360 300">
+        <ellipse cx="180" cy="270" rx="150" ry="18" fill="#8a5a2b" opacity=".18"/>
+        <ellipse cx="108" cy="232" rx="52" ry="8" fill="#5a3a18" opacity=".28"/><g transform="translate(40 70) rotate(-8 60 80)"><svg width="120" height="150" viewBox="0 0 100 120"><use href="#egg-brown"/></svg></g>
+        <ellipse cx="262" cy="236" rx="50" ry="8" fill="#5a3a18" opacity=".28"/><g transform="translate(205 80) rotate(10 60 80)"><svg width="115" height="145" viewBox="0 0 100 120"><use href="#egg-brown"/></svg></g>
+        <ellipse cx="180" cy="196" rx="58" ry="9" fill="#5a3a18" opacity=".3"/><g transform="translate(110 20)"><svg width="140" height="175" viewBox="0 0 100 120"><use href="#egg-white"/></svg></g>
+        <path d="M70 250c30-40 40-70 30-110M290 250c-20-40-25-60-10-100" stroke="#2f6b3a" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <ellipse cx="95" cy="170" rx="16" ry="8" fill="#2f6b3a" transform="rotate(-35 95 170)"/>
+        <ellipse cx="278" cy="180" rx="16" ry="8" fill="#2f6b3a" transform="rotate(35 278 180)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <p class="eyebrow">What we sell</p>
+    <h2>Our Organic Eggs</h2>
+    <p class="lead">Two varieties, both raised the natural way. Pick the one your family loves.</p>
+    <div class="grid products">
+      <article class="card">
+        <svg class="egg" viewBox="0 0 100 120"><use href="#egg-white"/></svg>
+        <h3>Organic White Eggs</h3>
+        <p>Clean, mild and rich in protein. A kitchen staple for breakfast, baking and everyday cooking.</p>
+        <div class="packs"><span class="pack">Tray of 6</span><span class="pack">Tray of 12</span><span class="pack">Tray of 30</span></div>
+        <p class="price">Price: call or WhatsApp for today's rate</p>
+        <a class="btn btn-wa" href="https://wa.me/918310901383?text=Hi%2C%20I%20want%20to%20order%20Organic%20White%20Eggs." target="_blank" rel="noopener">Order White Eggs</a>
+      </article>
+      <article class="card">
+        <svg class="egg" viewBox="0 0 100 120"><use href="#egg-brown"/></svg>
+        <h3>Organic Brown / Country Eggs</h3>
+        <p>Deep golden yolks and a hearty, farm-style flavour. Loved for its natural taste and nutrition.</p>
+        <div class="packs"><span class="pack">Tray of 6</span><span class="pack">Tray of 12</span><span class="pack">Tray of 30</span></div>
+        <p class="price">Price: call or WhatsApp for today's rate</p>
+        <a class="btn btn-wa" href="https://wa.me/918310901383?text=Hi%2C%20I%20want%20to%20order%20Organic%20Brown%20Eggs." target="_blank" rel="noopener">Order Brown Eggs</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <p class="eyebrow">Why Nutri Farm</p>
+    <h2>Good for you, good for the farm</h2>
+    <p class="lead">Honest farming, simple and clean, so what reaches your table is something you can trust.</p>
+    <div class="grid features">
+      <div class="feat"><div class="ic">🌱</div><h3>Organically Raised</h3><p>Natural feed and care, with a focus on healthy, happy hens.</p></div>
+      <div class="feat"><div class="ic">🥚</div><h3>Farm Fresh</h3><p>Collected and packed fresh so you get eggs at their best.</p></div>
+      <div class="feat"><div class="ic">💪</div><h3>Rich in Nutrition</h3><p>Protein, vitamins and minerals for the whole family.</p></div>
+      <div class="feat"><div class="ic">🤝</div><h3>Trusted Service</h3><p>Order by a simple call or message. Friendly and reliable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">About us</p>
+      <h2>From our farm to your family</h2>
+      <p class="lead">Nutri Farm Eggs is a small farm business dedicated to bringing people healthy, organically grown eggs. We believe good food starts with caring for the birds and the land.</p>
+      <ul>
+        <li>Organic, natural farming practices</li>
+        <li>Fresh eggs for homes, shops and restaurants</li>
+        <li>Bulk orders welcome</li>
+      </ul>
+    </div>
+    <div class="stat-box">
+      <strong>100%</strong>
+      Organic goodness in every tray
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Order or enquire</h2>
+    <p class="lead">Call, message or email us. We'll confirm your order and delivery details.</p>
+    <div class="grid contacts">
+      <div class="ccard"><div class="ic">📞</div><h3>Call us</h3>
+        <a href="tel:+918310901383">83109 01383</a>
+        <a href="tel:+919738767889">97387 67889</a></div>
+      <div class="ccard"><div class="ic">💬</div><h3>WhatsApp</h3>
+        <a href="https://wa.me/918310901383" target="_blank" rel="noopener">Chat on 83109 01383</a>
+        <a href="https://wa.me/919738767889" target="_blank" rel="noopener">Chat on 97387 67889</a></div>
+      <div class="ccard"><div class="ic">✉️</div><h3>Email</h3>
+        <a href="mailto:nutrifarmeggs@gmail.com">nutrifarmeggs@gmail.com</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><a href="privacy-policy.html" style="color:var(--yolk)">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms-of-service.html" style="color:var(--yolk)">Terms of Service</a><p style="margin-top:8px">© <span id="yr"></span> Nutri Farm Eggs. Organic, healthy, farm-fresh eggs.</p></footer>
+
+<a class="fab" href="https://wa.me/918310901383" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
